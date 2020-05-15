@@ -1,0 +1,48 @@
+{
+  "name": "amb-fsdb",
+  "version": "0.0.1",
+  "description": "Simple NodeJS File System Database",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --ignore db.json test/main.js",
+    "readme": "markdown-toc -i README.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ambratolm/fsdb.git"
+  },
+  "keywords": [
+    "fsdb",
+    "fs",
+    "db",
+    "file",
+    "system",
+    "database",
+    "file",
+    "system",
+    "database",
+    "crud",
+    "create",
+    "read",
+    "update",
+    "delete",
+    "query"
+  ],
+  "author": "ambratolm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ambratolm/fsdb/issues"
+  },
+  "homepage": "https://github.com/Ambratolm/fsdb#readme",
+  "devDependencies": {
+    "eslint": "^7.9.0",
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "i": "^0.3.6",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.20",
+    "uuid": "^8.3.0"
+  }
+}
