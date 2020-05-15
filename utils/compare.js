@@ -1,0 +1,58 @@
+//==============================================================================
+// ■ Compare (fsdb/utils/compare.js)
+//------------------------------------------------------------------------------
+//     Object comparison utility functions.
+//==============================================================================
+
+function comparePrimitives(valueA, valueB, options = {}) {
+  const { trim = false, ignoreCase = false } = options;
+  if (typeof valueA === typeof valueB) {
+    if (typeof valueA === "string") {
+      if (trim) {
+        valueA = valueA.trim();
+        valueB = valueB.trim();
+      }
+      if (ignoreCase) {
+        valueA = valueA.toUpperCase();
+        valueB = valueB.toUpperCase();
+      }
+    }
+    return valueA === valueB;
+  }
+  return false;
+}
+
+function isMatch(obj, query, options) {
+  for (const prop in query) {
+    if (!comparePrimitives(obj[prop], query[prop], options)) {
+      return false;
+    }
+  }
+  return true;
+}
+function matches(query, options) {
+  return obj => isMatch(obj, query, options);
+}
+
+function isPartialMatch(obj, query, options) {
+  for (const prop in query) {
+    if (comparePrimitives(obj[prop], query[prop], options)) {
+      return true;
+    }
+  }
+  return false;
+}
+function partiallyMatches(query, options) {
+  return obj => isPartialMatch(obj, query, options);
+}
+
+//------------------------------------------------------------------------------
+// ● Exports
+//------------------------------------------------------------------------------
+module.exports = {
+  isMatch,
+  matches,
+  comparePrimitives,
+  isPartialMatch,
+  partiallyMatches
+};
