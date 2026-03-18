@@ -36,13 +36,13 @@
   "homepage": "https://github.com/Ambratolm/fsdb#readme",
   "devDependencies": {
     "eslint": "^7.9.0",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.22"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
-    "i": "^0.3.6",
+    "i": "^0.3.7",
     "jsonwebtoken": "^9.0.0",
-    "lodash": "^4.17.21",
+    "lodash": "^4.17.23",
     "uuid": "^8.3.0"
   }
 }
